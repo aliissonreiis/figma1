@@ -55,6 +55,8 @@ function getReposGitHub(user){
                 let user_name = document.querySelector('.username-rep');
                 let location = document.querySelector('.text_localization');
                 let bio = document.querySelector('.text_bio');
+                let num_folllowers = document.querySelector('.num-followers');
+                let num_following = document.querySelector('.num-following');
                 let _user_name = document.querySelector('.user-name');
                 document.getElementById('img-perfil').src = itens.avatar_url;
                 _name.textContent = itens.name;
@@ -62,6 +64,8 @@ function getReposGitHub(user){
                 location.textContent = itens.location;
                 bio.textContent = itens.bio;
                 _user_name.textContent = itens.login;
+                num_folllowers.textContent = itens.followers
+                num_following.textContent = itens.following
                 
                 
                 

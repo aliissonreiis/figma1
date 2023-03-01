@@ -23,9 +23,9 @@ body{
     max-width: 100%;
     display: flex;
     flex-direction: column;
+    grid-template-columns: 20px 20px;
     float: center;
     align-items: center;
-   
     text-align: center;
     padding: 10px;
 }
@@ -34,6 +34,7 @@ body{
     border: 1px solid darkorange;
     background-color: #3e4144;
     color: white;
+    
 }
 .button-search{
     background-color: darkorange;
@@ -48,35 +49,53 @@ body{
 .corpo-site{
     display: grid;
     flex-direction: column;
-    grid-template-columns: 20% 70%;
+    grid-template-columns: 20% 50%;
+    text-align: center;
+    justify-content: center;
+
+    
+    
+    
     
 }
 .grupo-infos{
-    margin-left: 20%;
+    margin-left: 10%;
     border: 0px solid black;
     align-items: center;
     text-align: center;
     border-radius: 20px;
     background-color: #474b4e;
     box-shadow: 0px 2px 2px 2px black;
+    max-height: 40%;
+    position: relative;
 }
 #img-perfil{
     border-radius: 200px;
+    width: 20%;
     
 }
 .user-name{
     color: darkorange;
     padding-top: 40px;
 }
+.info-followers{
+    display: none;
+}
+.num-followers{
+    color: darkorange;
+}
+.num-following{
+    color: darkorange;
+}
 
 .bloco-repositorios{
     margin-left: 20%;
     /*padding-left: 150px;*/
     border: 0px solid black;
-    /*position: relative;*/
+    position: relative;
     float: center;
     margin-left: 5%;
-    margin-right: 10%;
+    margin-right: 5%;
     border-radius: 20px;
     background-color: #474b4e;
     box-shadow: 0px 2px 2px 2px black;
@@ -102,6 +121,7 @@ body{
     
 }
 
+
 .project{
     border: 1px solid black;
     background-color: #3e4144;
@@ -116,13 +136,34 @@ body{
 }
 a:link{
     color: white;
+    font-size: 10px;
+    
 }
 
-@media  screen and(max-width: 678px) {
-    .corpo-site{
-        max-width: 100%;
+@media screen and (max-width: 678px) {
+    .text_localization{
+        display: none;
+
     }
-    
+   
+    .info-followers{
+        display: inline;
+    }
+    .corpo-site{
+        display: block;
+        flex-direction: column;
+        grid-template-columns: 100% 100%;
+        align-items: center;
+        
+        
+    }
+    .grupo-infos{
+        margin-left: 5%;
+        margin-right: 5%;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+    }
+   
 }
 
 footer{
