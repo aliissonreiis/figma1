@@ -1,30 +1,44 @@
+
+
+// variaveis para escrever os dados da API
+
 const repositories = document.querySelector('.repositorios');
 const user_perfil = document.querySelector('.grupo-infos')
 
 
+// função para o botão search
 function s(){
-    
+    //cria variavel 'user' que recebe o valor do 'input-search'
    var user = document.getElementById('input-search').value;
-   console.log(user);
+   // chama a função criada para limpar os repositorios.
    limpRepos();
+   //chama a função que acessa a API.
    getReposGitHub(user);
     
   
 
 }
 
+
+//função criada para acessar a API
 function getReposGitHub(user){
-    
+    //acessando API e passando user para receber repositorios do usuario.
     fetch('https://api.github.com/users/'+user+'/repos')
+
+
     .then(async res => {
         if(!res.ok){
            // throw new Error(res.status);
             alert("Usuário não encontrado");
             location.reload();
         }
+        //cria a variavel de dados, guarda valor do res e converte para json.
         let data = await res.json();
+        //fucao que percorre todo o array json.
         data.map( item =>{
+        //cria variavel para escrever uma div no meu html
         let project = document.createElement('div');
+        //usa o comando innerHTML que recebe o codigo
         project.innerHTML = `
         <div class = "project">
              <div>
@@ -35,7 +49,7 @@ function getReposGitHub(user){
         </div>
         `
     
-        
+        //acrescenta uma tag filha dentro da tag de repositorios
         repositories.appendChild(project);
         
         })
@@ -77,11 +91,13 @@ function getReposGitHub(user){
    
 }
 
+//função para atualizar a pagina.
 function limpRepos(){
-    
+    // cria variavel lista e seleciona a class project criada para os repositorios.
     var lista = document.getElementsByClassName("project");
-    console.log(lista)
+    //se a variavel lista for diferente de nula executa o laço for.
     if(lista != null){
+    // laço for percorre a lista e remove todos os aquivos criados pelo project.
     for(var i = lista.length - 1; i >= 0; i--)
     {
         lista[i].remove()
