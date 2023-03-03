@@ -127,7 +127,7 @@ body{
 
 
 .project{
-    border: 1px solid black;
+    border: none;
     background-color: #2C333B;
     padding: 2px;
     gap: 30px;
