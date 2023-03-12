@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>GithubSearcher</title>
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <!--tag body: corpo do meu site-->
 <body>
@@ -15,7 +16,7 @@
         
         <a><img class="img-lupa" src="image_search.png" width="2%"/>Type an username below to search</a>
         <p>
-            <input id= "input-search"type="text" placeholder="Type here"/>
+            <input id="input-search"type="search" placeholder="Type here"/>
             <button type="button" onclick="s()" class="button-search"  >search</button>
         </p>
     </header>
@@ -27,7 +28,7 @@
             <p class="textfullname">Full Name</p>
             <p class="text_localization">Location</p>
             <p class="text_bio">Bio</p>
-            <p class="user-name">@username</p>
+            <p><a class="user-name" href="#" target="_blank" style="font-size: 20px;">@username</a></p>
             <div class="info-followers">
                 <a><a class="num-followers">0 </a>Followers</a>
                 <a><a class="num-following">0 </a>Following</a>
@@ -43,6 +44,9 @@
     <footer>
         <a>Developed by @aliissonreiis</a>
     </footer>
+    
     <script src="script.js"></script>
 </body>
 </html>
+
+

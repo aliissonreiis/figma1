@@ -79,7 +79,7 @@ body{
     
 }
 .user-name{
-    color: darkorange;
+    color: darkorange !important;
     padding-top: 40px;
 }
 .info-followers{
@@ -141,6 +141,7 @@ body{
     align-items: center;
     display: flex;
     float: center;
+    justify-content: center;
     
     
 }
